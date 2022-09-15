@@ -1161,7 +1161,7 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
+  gap: 1.125rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1170,23 +1170,11 @@ body::after {
           align-items: center;
 }
 
-@supports (gap: clamp( 0.5rem , 0.2023720944rem  +  1.488139528vw , 1.125rem )) {
-  .body-main-slider__controll {
-    gap: clamp( 0.5rem , 0.2023720944rem  +  1.488139528vw , 1.125rem );
-  }
-}
-
-@supports not (gap: clamp( 0.5rem , 0.2023720944rem  +  1.488139528vw , 1.125rem )) {
-  .body-main-slider__controll {
-    gap: calc(0.5rem + 0.625 * (100vw - 20rem) / 41.99875);
-  }
-}
-
 .body-main-slider__controll .swiper-pagination-bullet {
   font-size: 0rem;
   color: #4B72FF;
-  width: 0.5625rem;
-  height: 0.5625rem;
+  width: 0.6875rem;
+  height: 0.6875rem;
   border-radius: 50%;
   border: 0.0625rem solid #fff;
   -webkit-transition: gap 0.8s ease 0s;
