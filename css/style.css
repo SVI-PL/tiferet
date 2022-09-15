@@ -6804,6 +6804,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .showcase__image_trip {
     margin-left: 0;
   }
+
+  .showcase__image_trip-main {
+    display: none;
+  }
 }
 
 @media (max-width: 55.99875em) {
