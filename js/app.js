@@ -7183,6 +7183,21 @@ PERFORMANCE OF THIS SOFTWARE.
                     animOnScroll();
                 }), 300);
             }
+            (function() {
+                $(document).ready((function() {
+                    $("#roundslider").roundSlider({
+                        sliderType: "min-range",
+                        value: 80,
+                        width: 3,
+                        radius: 257,
+                        max: "10000",
+                        handleSize: "+70",
+                        startAngle: 90,
+                        tooltipFormat: "tooltipVal2",
+                        svgMode: true
+                    });
+                }));
+            }).call(this);
         }));
         window["FLS"] = true;
         isWebp();
