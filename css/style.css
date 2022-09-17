@@ -4659,47 +4659,36 @@ body::after {
 }
 
 .rs-control .rs-range-color {
-  background-color: #3551b7;
+  background-color: #3551b7 !important;
 }
 
 .rs-control .rs-path-color {
-  background-color: #3551b7;
+  background-color: #3551b7 !important;
 }
 
 .rs-control .rs-handle {
-  background-color: #3551b7;
+  background-color: #3551b7 !important;
 }
 
 .rs-control .rs-bg-color {
-  background-color: white;
+  background-color: white !important;
 }
 
 .rs-svg-mode .rs-border {
-  stroke: #3551b7;
+  stroke: #3551b7 !important;
 }
 
 .rs-svg-mode .rs-range {
-  stroke: #3551b7;
+  stroke: #3551b7 !important;
 }
 
 .rs-tooltip-text {
-  color: #3551B7;
-}
-
-@supports (font-size: clamp( 2.5rem , 1.2rem  +  6.5vw , 6.5625rem )) {
-  .rs-tooltip-text {
-    font-size: clamp( 2.5rem , 1.2rem  +  6.5vw , 6.5625rem );
-  }
-}
-
-@supports not (font-size: clamp( 2.5rem , 1.2rem  +  6.5vw , 6.5625rem )) {
-  .rs-tooltip-text {
-    font-size: calc(2.5rem + 4.0625 * (100vw - 20rem) / 62.5);
-  }
+  color: #3551B7 !important;
+  font-size: 6.5625rem !important;
 }
 
 .rs-svg-mode .rs-path {
-  stroke: none;
+  stroke: none !important;
 }
 
 .rs-svg-container {
