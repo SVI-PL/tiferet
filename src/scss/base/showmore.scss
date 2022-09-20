@@ -1,0 +1,92 @@
+[data-showmore] {}
+
+[data-showmore-content] {}
+
+[data-showmore-button] {
+
+	span {
+		&:last-child {
+			display: none;
+		}
+
+		._showmore-active & {
+			display: none;
+			@include adaptiveValue("padding-top", 20, 15, 1320, 375, 1);
+			max-width: 85px;
+			margin: 0 auto;
+
+			&:last-child {
+				display: block;
+			}
+		}
+	}
+}
+
+// ====================================
+// show-more for gallery-cards.html
+.show-more {
+	@media (min-width:$tablet) {
+		display: none;
+	}
+
+	// @include adaptiveValue("padding-top", 100, 50, 1300, 375, 1);
+	display: flex;
+	flex-direction: column;
+
+	// .show-more__content
+	&__content {}
+
+	// .show-more__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(410), 1fr));
+		gap: rem(20);
+		@include adaptiveValue("row-gap", 100, 43, 1300, 375, 1);
+
+		@media (max-width: em(444)) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+		}
+
+		@media (max-width: em(375)) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		}
+	}
+
+	// .show-more__item
+	&__item {}
+
+	// .show-more__more
+	&__more {
+
+		// .show-more__more_ramat
+		&_ramat {
+			padding-top: rem(20);
+		}
+	}
+
+	// .show-more__button
+	&__button {
+		padding: 0;
+		@include adaptiveValue("font-size", 16, 12, 767.98, 320, 1);
+		color: #002AC3;
+
+
+		// .show-more__button_less
+		&_less {
+			border-bottom: rem(1) solid #002AC3;
+		}
+
+		// .show-more__button_ramat
+		&_ramat {
+			color: $whiteColor;
+		}
+
+		// .show-more__button_less-ramat
+		&_less-ramat {
+			border-color: $whiteColor;
+		}
+	}
+
+	// .show-more_ramat
+	&_ramat {}
+}

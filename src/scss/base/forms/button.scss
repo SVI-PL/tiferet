@@ -1,0 +1,240 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: rem(13) rem(115);
+	background-color: $whiteColor;
+	color: $mainColor;
+	border-radius: rem(58);
+
+	@media (any-hover: hover) {
+		&:hover {}
+	}
+
+	// .button_black
+	&_black {
+		background-color: $mainColor;
+		color: $whiteColor;
+	}
+
+	&._fw {
+		width: 100%;
+	}
+}
+
+// ====================================
+.wrapper-btn {
+	align-self: flex-start;
+	cursor: pointer;
+	opacity: 0;
+	transition: all 0.8s ease 1.3s;
+
+	// .wrapper-btn_op
+	&_op {
+		opacity: 1;
+	}
+
+	&._active {
+		opacity: 1;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			.shake {
+				animation: shake .6s ease-in-out both;
+
+				span {
+					animation: shakeText .5s ease-in-out both;
+					animation-delay: 0.05s;
+				}
+			}
+
+			.float {
+				animation: float 1.8s ease-in-out both infinite;
+
+				span {
+					animation: floatText 1.8s ease-in-out both infinite;
+					animation-delay: 0.05s;
+				}
+			}
+		}
+	}
+}
+
+.btn {
+	// background: $brand-gray;
+	border-radius: rem(58);
+	border: none;
+	align-self: flex-start;
+
+	span {
+		position: relative;
+	}
+}
+
+.btn-primary {}
+
+.btn-outline {}
+
+.btn-primary.btn-outline {
+	// border: solid 1px #fff;
+	background: #fff;
+	color: $mainColor;
+	padding-top: rem(15);
+	padding-bottom: rem(15);
+	@include adaptiveValue("padding-left", 115, 80, 1320, 600, 1);
+	@include adaptiveValue("padding-right", 115, 80, 1320, 600, 1);
+	@include adaptiveValue("font-size", 18, 16, 1320, 320, 1);
+
+	// .btn-outline_purple
+	&_purple {
+		background: $mainColor;
+		color: $whiteColor-2;
+	}
+
+	// .btn-outline_purple-img
+	&_purple-img {
+		@include adaptiveValue("padding-left", 135, 96, 1320, 600, 1);
+		@include adaptiveValue("padding-right", 135, 96, 1320, 600, 1);
+
+		@media (max-width: em(689.98)) {
+			@include adaptiveValue("padding-left", 150, 92, 689.98, 320, 1);
+			@include adaptiveValue("padding-right", 150, 92, 689.98, 320, 1);
+		}
+	}
+
+	// .btn-outline_learn
+	&_learn {
+		border: rem(1) solid $mainColor;
+		@include adaptiveValue("padding-left", 85, 65, 1320, 320, 1);
+		@include adaptiveValue("padding-right", 85, 65, 1320, 320, 1);
+
+		// padding-left: rem(85);
+		// padding-right: rem(85);
+		@media (max-width:$mobile) {
+			@include adaptiveValue("padding-left", 85, 65, 767.98, 320, 1);
+			@include adaptiveValue("padding-right", 85, 65, 767.98, 320, 1);
+		}
+
+		@media (max-width: em(519.98)) {
+			// width: 240px;
+			@include adaptiveValue("width", 450, 240, 519.98, 320, 1);
+		}
+	}
+
+	// .btn-outline_learn-short
+	&_learn-short {
+		@include adaptiveValue("padding-left", 66, 45, 1320, 992, 1);
+		@include adaptiveValue("padding-right", 66, 45, 1320, 992, 1);
+	}
+
+	// .btn-outline_show
+	&_show {
+		@include adaptiveValue("padding-left", 85, 45, 1320, 992, 1);
+		@include adaptiveValue("padding-right", 85, 45, 1320, 992, 1);
+
+		@media (max-width: em(465)) {
+			// width: 240px;
+			@include adaptiveValue("width", 350, 240, 464.98, 320, 1);
+		}
+	}
+
+	// .btn-outline_trans
+	&_trans {
+		background: transparent;
+		color: $whiteColor;
+		border: rem(1) solid $whiteColor;
+	}
+
+	// .btn-outline_trans-bd
+	&_trans-bd {
+		border: rem(1) solid $mainColor;
+		color: $mainColor;
+	}
+
+	// .btn-outline_form
+	&_form {
+		padding: 14px 48px;
+		color: $whiteColor;
+		font-weight: 700;
+		background-color: transparent;
+		border: rem(1) solid $whiteColor;
+	}
+
+	// .btn-outline_things
+	&_things {
+		@include adaptiveValue("width", 295, 90, 1320, 320, 1);
+		text-transform: capitalize;
+		@include adaptiveValue("font-size", 28, 12);
+		letter-spacing: -0.02em;
+		color: $whiteColor-3;
+		padding: rem(14) 0;
+	}
+
+	// .btn-outline_main-catalog
+	&_main-catalog {
+		padding: rem(18) rem(65);
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		color: $whiteColor-2;
+
+		@media (max-width: em(500)) {
+			padding-top: rem(15);
+			padding-bottom: rem(15);
+		}
+	}
+
+	// .btn-outline_applic
+	&_applic {
+		@include adaptiveValue("width", 262, 240, 1320, 320, 1);
+		padding: rem(15) 0;
+		text-transform: uppercase;
+	}
+
+	// .btn-outline_donat
+	&_donat {
+		@include adaptiveValue("margin-top", 50, 60, 1320, 320, 1);
+		padding: rem(20) rem(45);
+		color: $blueColor;
+		border-color: $blueColor;
+		@include adaptiveValue("font-size", 18, 14, 1320, 320, 1);
+
+		@media (max-width:$tablet) {
+			padding-left: rem(68);
+			padding-right: rem(68);
+		}
+	}
+}
+
+@keyframes shake {
+	25% {
+		transform: rotate(3deg);
+	}
+
+	50% {
+		transform: rotate(-3deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes shakeText {
+	0% {
+		right: 4px;
+	}
+
+	33% {
+		right: -4px;
+	}
+
+	66% {
+		right: 4px;
+	}
+
+	100% {
+		right: 0;
+	}
+}

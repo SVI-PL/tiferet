@@ -1,0 +1,115 @@
+.page {
+
+	// .page__description
+	&__description {}
+}
+
+.tiferet {
+	@include adaptiveValue("padding-top", 230, 90, 1320, 320, 1);
+	@include adaptiveValue("padding-bottom", 60, 22, 1320, 320, 1);
+	background-color: $whiteColor;
+}
+
+.showcase {
+
+	// .showcase__container
+	&__container {}
+
+	// .showcase__wrapper
+	&__wrapper {
+
+		// .showcase__wrapper_descr
+		&_descr {}
+	}
+
+	// .showcase__main
+	&__main {
+
+		// .showcase__main_descr
+		&_descr {}
+	}
+
+	// .showcase__image
+	&__image {
+
+
+		// .showcase__image_descr
+		&_descr {}
+
+		// .showcase__image_applic
+		&_applic {
+			flex: 0 0 math.div(458, 1320) * 100%;
+		}
+	}
+
+	// .showcase__content
+	&__content {
+
+		// .showcase__content_descr
+		&_descr {}
+
+		// .showcase__content_applic
+		&_applic {
+			@include adaptiveValue("gap", 30, 15, 1320, 320, 1);
+
+			@media (min-width:$tablet) {
+				max-width: 825px;
+			}
+		}
+	}
+
+	// .showcase__title
+	&__title {
+
+		// .showcase__title_stud
+		&_stud {}
+	}
+
+	// .showcase__anim
+	&__anim {
+
+		// .showcase__anim_second
+		&_second {}
+	}
+
+	// .showcase__text
+	&__text {
+
+		// .showcase__text_descr
+		&_descr {}
+	}
+
+	// .showcase__link
+	&__link {
+		align-self: center;
+		color: $blueColor-2;
+		border-bottom: 1px solid $blueColor-2;
+		@include adaptiveValue("font-size", 18, 12);
+		text-transform: capitalize;
+		@include adaptiveValue("margin-top", 10, 5, 1320, 320, 1);
+	}
+}
+
+
+.country {
+
+	// .country__items
+	&__items {
+		// flex-wrap: nowrap;
+
+		// .country__items_applic
+		&_applic {
+			@include adaptiveValue("margin-top", 47, 15, 1320, 320, 1);
+		}
+	}
+
+	// .country__item
+	&__item {
+
+		// .country__item_applic
+		&_applic {}
+	}
+
+	// .country__wrapper-btn
+	&__wrapper-btn {}
+}

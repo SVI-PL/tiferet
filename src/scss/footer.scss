@@ -1,0 +1,208 @@
+//====================================================================================================
+.footer {
+	background-color: $mainColor;
+	color: $whiteColor-3;
+	@include adaptiveValue("padding-top", 35, 30, 1320, 320, 1);
+	@include adaptiveValue("padding-bottom", 22, 15, 1320, 320, 1);
+	// position: relative;
+
+	// &::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	bottom: rem(-20);
+	// 	width: 100%;
+	// 	height: rem(20);
+	// 	background-color: $whiteColor-4;
+	// }
+
+	// .footer__container
+	&__container {}
+
+	// .footer__main
+	&__main {
+		// padding-left: rem(100);
+		// padding-right: rem(100);
+		// padding-top: rem(35);
+		// @include adaptiveValue("padding-bottom", 74, 25);
+
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: 1fr;
+			@include adaptiveValue("gap", 185, 15, 1250, 1050, 1);
+		}
+	}
+
+	// .footer__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 30, 20, 1300, 375, 1);
+
+		@media (max-width:$tablet) {
+			@include adaptiveValue("margin-bottom", 35, 15, 991.98, 375, 1);
+		}
+	}
+
+	// .footer__logo
+	&__logo {}
+
+	// .footer__descr
+	&__descr {
+		line-height: math.div(24, 16);
+	}
+
+	// .footer__nav
+	&__nav {
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				margin-bottom: rem(44);
+			}
+		}
+	}
+
+	// .footer__bottom
+	&__bottom {
+		@include adaptiveValue("margin-top", 35, 50, 1320, 320, 1);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $whiteColor-3;
+		gap: rem(35);
+
+		@media (max-width: em(650)) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	// .footer__copyright
+	&__copyright {
+
+		font-size: rem(16);
+		line-height: math.div(28, 16);
+		@include adaptiveValue("font-size", 16, 12, 1320, 320, 1);
+
+		@media (max-width: em(650)) {
+			max-width: rem(200);
+			align-self: flex-start;
+			font-weight: 300;
+		}
+
+	}
+
+	// .footer__social
+	&__social {
+		display: flex;
+		gap: rem(30);
+	}
+
+	// .footer__icon
+	&__icon {
+		font-size: rem(30);
+	}
+}
+
+.nav-footer {
+
+	// .nav-footer__spollers
+	&__spollers {
+		display: grid;
+		gap: rem(10);
+		//   grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+			gap: rem(30);
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+			gap: rem(20);
+		}
+
+		@media (max-width: rem(449.98)) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));
+			gap: rem(20);
+		}
+
+		@media (max-width: rem(354.98)) {
+			grid-template-columns: repeat(auto-fit, minmax(rem(130), 1fr));
+			gap: rem(20);
+		}
+	}
+}
+
+.footer-spoller-item {
+
+
+	// .footer-spoller-item__title
+	&__tittle {
+		font-weight: 600;
+		line-height: math.div(25, 18);
+
+		@media (min-width: $tablet) {
+			// ?
+			// &:not(:last-child) {margin-bottom: rem(10);}
+		}
+	}
+
+	// .footer-spoller-item__body
+	&__body {}
+}
+
+.menu-footer {
+
+	// .menu-footer__list
+	&__list {}
+
+	// .menu-footer__item
+	&__item {
+
+		&:not(:last-child) {
+			margin-bottom: rem(13);
+		}
+	}
+
+	// ^ плавное подчёркивание при наведении  ------------------------
+	// .menu-footer__link
+	&__link {
+		line-height: math.div(28, 18);
+		color: $whiteColor-3;
+		transition: color 0.3s ease 0s;
+		@include adaptiveValue("font-size", 18, 12, 1320, 320, 1);
+	}
+}
+
+// ^ плавное подчёркивание при наведении  ------------------------
+.menu-footer__link {
+	position: relative;
+	transition: color 0.4s ease-in-out;
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 0%;
+		height: 2px;
+		background-color: #fff;
+		right: 0;
+		bottom: -5px;
+		transition: all 0.2s ease-in-out;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+//====================================================================================================
+.footer-divider {
+	background-color: #fff;
+	height: rem(20);
+}

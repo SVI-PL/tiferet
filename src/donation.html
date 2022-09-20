@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"Donation" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm', { "home" : "_active", "family" : "", "students" : "", "application" : "", "donation" : "" })
+			<main class="page">
+				<section class="page__support support">
+					<div class="support__container">
+						<div class="support__wrapper">
+							<h1 class="support__title"><span>Show your support</span><span class="support__subtitle">General Donations</span></h1>
+							<div class="showcase__items showcase__items_donat">
+								<div class="showcase__item showcase__item_donat">
+									<h3 class="showcase__ball showcase__ball_donats">$180</h3>
+								</div>
+								<div class="showcase__item showcase__item_donat">
+									<h3 class="showcase__ball showcase__ball_donats">$360</h3>
+								</div>
+								<div class="showcase__item showcase__item_donat">
+									<h3 class="showcase__ball showcase__ball_donats">$500</h3>
+								</div>
+								<div class="showcase__item showcase__item_donat">
+									<h3 class="showcase__ball showcase__ball_donats">$1,800</h3>
+								</div>
+								<div class="showcase__item showcase__item_donat">
+									<h3 class="showcase__ball showcase__ball_donats">$3,600</h3>
+								</div>
+								<div class="showcase__item showcase__item_donat">
+									<h3 class="showcase__ball showcase__ball_donats">Custom Amount</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__sponsorship sponsorship showcase">
+					<div class="showcase__container">
+						<div class="showcase__wrapper showcase__wrapper_descr">
+							<div class="showcase__main showcase__main_descr">
+								<div class="showcase__image showcase__image_donat _anim-items _anim-no-hide"><img src="@img/donation/girls.jpg" alt="girls"></div>
+								<div class="showcase__content showcase__content_donat">
+									<h2 class="showcase__subtitle showcase__anim _anim-items _anim-no-hide">Sponsorship Opportunities <span class="showcase__subtitle showcase__subtitle_donat">All Day Learning </span></h2>
+									<p class="showcase__text showcase__text_descr showcase__anim showcase__anim_second _anim-items _anim-no-hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non ornare arcu, in porta justo. In vitae magna velit. Integer id magna ut lorem consequat elementum ac non libero. Aenean nisl quam, pulvinar nec elit sit amet, faucibus gravida mauris. Curabitur elementum suscipit nisl, vel mattis arcu interdum vitae. Mauris mollis arcu non ex bibendum tincidunt.</p>
+									<div class="showcase__circle-block">
+										<!-- <div class="showcase__inner">
+											<span>How much will you donate?</span>
+											<span>$180</span>
+											<span>All Day Learning</span>
+										</div>
+										<div class="showcase__circle"></div> -->
+										<div class="row">
+											<div class="col">
+												<div id="roundslider">
+													<div class="showcase__inner">
+														<span>How much will you donate?</span>
+														<!-- <span>$180</span> -->
+														<span>All Day Learning</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="showcase__wrapper-btn showcase__wrapper-btn_donat wrapper-btn _anim-items _anim-no-hide">
+										<button class="btn btn-primary btn-outline btn-outline_trans-bd btn-outline_donat shake">
+											<span>Send donation</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- =================================================== -->
+					<div class="row">
+						<div class="col">
+							<div id="roundslider"></div>
+						</div>
+					</div>
+					<!-- =================================================== -->
+
+
+				</section>
+				@@include('html/_feedback.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+
+		@@include('html/_popup-home.htm',{}) @@include('html/_js.htm',{})
+		<!-- -------------------------------------------------------------------------------- -->
+		<!-- roundslider -->
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+		<!-- -------------------------------------------------------------------------------- -->
+	</body>
+</html>

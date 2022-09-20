@@ -1,0 +1,4 @@
+.news-events {
+	@include adaptiveValue("padding-top", 270, 120, 1320, 320, 1);
+	@include adaptiveValue("padding-bottom", 70, 50, 1320, 320, 1);
+}
